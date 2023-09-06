@@ -60,7 +60,7 @@ public class WeaponChnagerMech : MonoBehaviour
         }
 
        string nameParam= playerAnim.GetParameter(2 + weaponNumer).name;
-        Debug.Log("ParamName=="+nameParam);
+      //  Debug.Log("ParamName=="+nameParam);
         playerAnim.SetBool(nameParam, true);
 
         #region new way of making parametr false....
