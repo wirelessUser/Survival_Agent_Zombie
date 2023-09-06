@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class PlayerBehaviour : MonoBehaviour
+public class PlayerBehaviour :MonoBehaviour
 {
     public float currentHealth, maxhealth;
     public float moveHor, moveVert,moveSpeed;
@@ -55,9 +55,10 @@ public class PlayerBehaviour : MonoBehaviour
 
 
 
-       // girlBody.MovePosition(new Vector2(moveHor , moveVert) * moveSpeed); // Not working  i think gravity is applying but postion is maintain at zero Due to 
-       //  Zero moveHor and MoveVert;
+            // girlBody.MovePosition(new Vector2(moveHor , moveVert) * moveSpeed); // Not working  i think gravity is applying but postion is maintain at zero Due to 
+            //  Zero moveHor and MoveVert;
 
+           
             girlBody.MovePosition(girlBody.position + new Vector2(moveHor, moveVert) * moveSpeed*Time.deltaTime);
 
         //Player Follow Mouse Rotation.............................
