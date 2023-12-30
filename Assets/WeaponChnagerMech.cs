@@ -41,7 +41,7 @@ public class WeaponChnagerMech : MonoBehaviour
     public void ChnageWeapon()
     {
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             weaponNumer++;
             if (weaponNumer > weaponArray.Length - 1)
@@ -50,7 +50,7 @@ public class WeaponChnagerMech : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             weaponNumer--;
             if (weaponNumer < 0)

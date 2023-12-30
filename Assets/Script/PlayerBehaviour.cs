@@ -69,7 +69,7 @@ public class PlayerBehaviour :MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-                weponChnagerRef.currentWeapon.GetComponent<ShootingBehaviour>().CreateAndShootBullet();
+                weponChnagerRef.currentWeapon.GetComponent<ShootingBehaviour>().CreateAndShootBullet(gameObject);
         }
 
 
