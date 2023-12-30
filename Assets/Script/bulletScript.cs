@@ -12,14 +12,14 @@ public class bulletScript : MonoBehaviour
        // Destroy(gameObject, 4);
     }
 
- 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
             EnemyBerhaviour enemy = collision.gameObject.GetComponent<EnemyBerhaviour>();
             enemy.TakeDamage(10);
-            Destroy(gameObject);
+
 
         }
 
@@ -27,11 +27,18 @@ public class bulletScript : MonoBehaviour
         {
             Debug.Log("Calling car");
             collision.gameObject.GetComponent<ObejctDestructionScript>().takeDamage(10);
-           
-            Destroy(gameObject);
+
+
 
         }
+
+
+
+        Destroy(gameObject);
+
+
     }
 
-    
+
+
 }

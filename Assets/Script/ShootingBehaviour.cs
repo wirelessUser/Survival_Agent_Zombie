@@ -25,27 +25,25 @@ public class ShootingBehaviour : MonoBehaviour
         
 
     }
-
-    public void CreateAndShootBullet()
+    public void CreateAndShootBullet(GameObject rotationRef)
     {
-        //bulletScript bulletInst = Instantiate(bulletPrefab  , shootPOint.transform.position/*, shootPOint.transform.rotation*/);
-        // bulletScript bulletInst = Instantiate(bulletPrefab, shootPOint.transform.position,bulletPrefab.transform.rotation);
 
-        if (Time.time>shotPerSeconds && bulletCount>0)
+
+        if (Time.time > shotPerSeconds && bulletCount > 0)
         {
             ShootAnimator.SetTrigger("Shoot");
             shotPerSeconds = Time.time + bulletShootTimeGap;
             bulletCount--;
             foreach (Transform transfromPoint in shootPOint)
             {
-                bulletScript bulletInst = Instantiate(bulletPrefab, transfromPoint.transform.position, transfromPoint.transform.localRotation);
-                // bulletInst.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1*velocity);
+                bulletScript bulletInst = Instantiate(bulletPrefab, transfromPoint.transform.position, rotationRef.transform.localRotation);
+
                 bulletInst.GetComponent<Rigidbody2D>().velocity = transfromPoint.transform.up * velocity;
             }
         }
 
-       
-       
+
+
     }
 
 
